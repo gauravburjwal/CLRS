@@ -6014,7 +6014,46 @@ $$</p>
 <p>Show that the gcd operator is associative. That is, prove that for all integers $a$, $b$, and $c$,</p>
 <p>$\gcd(a, \gcd(b, c)) = \gcd(\gcd(a, b), c)$.</p>
 </blockquote>
-<p>(Omit!)</p>
+<p><em>[The following proof is provided by my friend, Tony Xiao.]</em></p>
+<p>Let $d = \gcd(a, b, c)$, $a = dp$, $b = dq$ and $c = dr$.</p>
+<p><strong><em>Claim</em></strong> $\gcd(a, \gcd(b, c)) = d.$</p>
+<p>Let $e = \gcd(b, c)$, thus</p>
+<p>$$
+\begin{aligned}
+b = es, \\
+c = et.
+\end{aligned}
+$$</p>
+<p>Since $d \mid b$ and $d \mid c$, thus $d \mid e$.</p>
+<p>Let $e = dm$, thus</p>
+<p>$$
+\begin{aligned}
+b = (dm)s &amp; = dq, \\
+c = (dm)t &amp; = dr.
+\end{aligned}
+$$</p>
+<p>Suppose $k = \gcd(p, m)$,</p>
+<p>$$
+\begin{aligned}
+            &amp; k \mid p, k \mid m, \\
+\Rightarrow &amp; dk \mid dp, dk \mid dm, \\
+\Rightarrow &amp; dk \mid dp, dk \mid (dm)s, dk \mid (dm)t, \\
+\Rightarrow &amp; dk \mid a, dk \mid b, dk \mid c.
+\end{aligned}
+$$</p>
+<p>Since $d = \gcd(a, b, c)$, thus $k = 1$.</p>
+<p>$$
+\begin{aligned}
+\gcd(a, \gcd(b, c))
+    &amp; = \gcd(a, e) \\
+    &amp; = \gcd(dp, dm) \\
+    &amp; = d \cdot \gcd(p, m) \\
+    &amp; = d \cdot k \\
+    &amp; = d.
+\end{aligned}
+$$</p>
+<p>By the claim,</p>
+<p>$$\gcd(a, \gcd(b, c)) = d = \gcd(\gcd(a, b), c).$$</p>
 <h2 id="311-11-star">31.1-11 $\star$</h2>
 <blockquote>
 <p>Prove Theorem 31.8.</p>
